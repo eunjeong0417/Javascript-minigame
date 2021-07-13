@@ -1,0 +1,15 @@
+.background {
+  position: relative;
+}
+
+.bug {
+  position: absolute;
+  margin-top: -100em;
+  width: 200px;
+  height: 200px;
+}
+
+.bug img {
+  width: 100%;
+  height: 100%;
+}
