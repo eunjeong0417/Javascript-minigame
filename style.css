@@ -1,15 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .background {
   position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background img {
+  width: 100%;
+  height: 100vh;
 }
 
 .bug {
   position: absolute;
-  margin-top: -100em;
-  width: 200px;
-  height: 200px;
+  margin-top: -20em;
+  margin-left: 10em;
+  width: 5em;
+  height: 5em;
 }
 
 .bug img {
   width: 100%;
   height: 100%;
+}
+
+.carrot {
+  position: absolute;
+  margin-top: -25em;
+  margin-left: 10em;
+  width: 5em;
+  height: 5em;
+}
+
+.carrot img {
+  width: 100%;
+  height: 100%;
+}
+
+.no-item {
+  display: none;
 }
