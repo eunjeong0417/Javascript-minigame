@@ -154,10 +154,9 @@ button {
 }
 
 .game_field {
-  top: 55%;
-  position: absolute;
+  position: relative;
+  bottom: 20em;
   width: 100%;
-  height: 100%;
-  background-color: white;
-  opacity: 0;
+  height: 330px;
+  background-color: red;
 }
