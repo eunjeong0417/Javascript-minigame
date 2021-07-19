@@ -1,5 +1,5 @@
 const itemEl = document.querySelector('.items')
-const bugEl = document.querySelector('.bug')
+const bugEl = document.querySelector('.items_bug')
 
 
 

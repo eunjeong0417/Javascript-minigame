@@ -4,6 +4,40 @@
   padding: 0;
 }
 
+.header {
+  font-size: 1.5em;
+  position: absolute;
+  z-index: 100;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50%;
+  margin-top: 10px;
+}
+
+.header button {
+  width: 2em;
+  font-size: 1.7em;
+}
+
+.timer {
+  border: 2px solid black;
+  padding: 0.3em;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+
+.count {
+  width: 7em;
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 0.5em;
+  background-color: brown;
+}
+
 .background {
   position: relative;
   width: 100%;
@@ -15,7 +49,7 @@
   height: 100vh;
 }
 
-.bug {
+.items_bug {
   position: absolute;
   width: 5em;
   height: 5em;
@@ -26,9 +60,9 @@
   height: 100%;
 }
 
-.carrot {
+.items_carrot {
   position: absolute;
-  margin-top: -25em;
+  margin-top: -20em;
   margin-left: 10em;
   width: 5em;
   height: 5em;
@@ -41,4 +75,11 @@
 
 .no-item {
   display: none;
+}
+
+.popup {
+  position: absolute;
+  z-index: 100;
+  bottom: 10em;
+  left: 10em;
 }
