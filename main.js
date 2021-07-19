@@ -1,6 +1,6 @@
 const field = document.querySelector('.game_field');
 const fieldRect = field.getBoundingClientRect();
-const CARROT_SIZE = 80;
+const CARROT_SIZE = 90;
 
 
 //getBoundingClientRect로 아이템을 넣어줄
