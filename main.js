@@ -1,20 +1,15 @@
-const itemEl = document.querySelector('.items')
-const bugEl = document.querySelector('.items_bug')
+const field = document.querySelector('.game_field');
+const fieldRect = field.getBoundingClientRect();
 
 
+//getBoundingClientRect로 아이템을 넣어줄
+// 공간의 x,y축 확인
+function init() {
+    console.log(fieldRect);
+}
 
-bugEl.style.top = "400px"
-
-//이벤트 위임
-itemEl.addEventListener('click', (e) => {
+function addItems() {
     
-    if (e.target.classList.contains('bug-item')) {
-        e.target.classList.add('no-item')
-    } else if (e.target.classList.contains('carrot-item')) {
-        e.target.classList.add('no-item')
-    }
-})
+}
 
-
-
-
+init()
