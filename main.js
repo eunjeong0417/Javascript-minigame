@@ -9,7 +9,7 @@ const countEl = document.querySelector('.count')
 
 //초기 상태 설정
 let start = false;
-let count = 0;
+let count = 10;
 let timer = undefined;
 
 //carrot 아이템 사이즈, 카운트 설정
@@ -17,6 +17,8 @@ const CARROT_SIZE = 90;
 //field 밖으로 아이템이 나오지 않도록
 //CARROT_SIZE를 90으로 지정해서 빼준다
 const CARROT_COUNT = 7;
+const GAME_DURATION_SEC = 8;
+//게임 duration second를 5초로 설정한다
 
 
 //start 버튼이 클릭되면 게임 시작
@@ -31,10 +33,29 @@ startBtn.addEventListener('click', () => {
         init();
         showStopBtn();
         showTimerAndScore();
+        startTimer();
     }
     start = !start;
     //버튼 누를때마다 상태변경
 })
+
+function startTimer() { // Value in minutes
+    let time = GAME_DURATION_SEC; //7초
+    updateTimer(time)
+    timer = setInterval(() => {
+        if (time <= 0) {
+            clearInterval(timer);
+            return;
+        }
+        updateTimer(--time);
+    }, 1000);
+}
+
+function updateTimer(time) {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    timerEl.innerText = `${minutes}:${seconds}`;
+}
 
 function showStopBtn() {
     const stopIcon = document.querySelector('.fa-play');
@@ -84,3 +105,5 @@ function addItems(className, count, imgSrc ) {
 function randomNum(min, max) {
     return Math.random() * (max - min) + min;
 }
+
+//field의 최소 최대 범위 구하기
